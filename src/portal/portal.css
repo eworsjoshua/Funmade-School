@@ -1,0 +1,72 @@
+.portal-navbar {
+  background-color: #1e3a8a !important; /* matches the school blueberry navy */
+}
+
+.portal-brand {
+  color: #fbbf24 !important; /* gold accent */
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.portal-nav-tab {
+  font-weight: 500;
+  color: #4b5563;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.15s ease-in-out;
+}
+
+.portal-nav-tab:hover {
+  background-color: #f3f4f6;
+  color: #1e3a8a;
+}
+
+.portal-nav-tab.active {
+  background-color: #1e3a8a !important;
+  color: #ffffff !important;
+}
+
+.status-badge-present {
+  background-color: #dcfce7;
+  color: #166534;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 9999px;
+  display: inline-block;
+  font-size: 0.8rem;
+}
+
+.status-badge-late {
+  background-color: #fef9c3;
+  color: #854d0e;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 9999px;
+  display: inline-block;
+  font-size: 0.8rem;
+}
+
+.status-badge-absent {
+  background-color: #fee2e2;
+  color: #991b1b;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 9999px;
+  display: inline-block;
+  font-size: 0.8rem;
+}
+
+.portal-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.portal-card-header {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #f3f4f6;
+  background-color: #ffffff;
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}

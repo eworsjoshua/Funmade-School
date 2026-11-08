@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 function Footer() {
   return (
     <footer className="bg-gray-800 text-white py-8">
@@ -18,6 +20,7 @@ function Footer() {
               {[["#home","Home"],["#about","About Us"],["#programs","Programs"],["#admissions","Admissions"]].map(([href, label]) => (
                 <li key={href}><a href={href} className="hover:text-white transition-colors">{label}</a></li>
               ))}
+              <li><Link to="/login" className="text-yellow-400 hover:text-white font-medium transition-colors">School Portal Login →</Link></li>
             </ul>
           </div>
           <div>

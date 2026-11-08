@@ -1,4 +1,12 @@
+import { Link } from "react-router";
+import { useAuth } from "../portal/auth/AuthContext";
+import { homeFor } from "../portal/auth/roles";
+
 function Header() {
+  const { user } = useAuth();
+  const portalTo = (user && homeFor(user.role)) || "/login";
+  const portalLabel = user ? `My Portal (${user.role})` : "Portal Login";
+
   return (
     <header className="bg-blue-900 text-white shadow-lg">
       <div className="container mx-auto px-4 py-3">
@@ -12,13 +20,18 @@ function Header() {
               <p className="text-blue-200 text-sm">Excellence in Education</p>
             </div>
           </div>
-          <nav className="hidden md:flex space-x-6 text-decoration-line: none;">
-            <a href="#home" className="text-white hover:text-yellow-600 transition-colors text-decoration-line: none">Home</a>
-            <a href="#about" className="hover:text-yellow-300 transition-colors text-white">About</a>
-            <a href="#programs" className="hover:text-yellow-300 transition-colors text-white">Programs</a>
-            <a href="#admissions" className="hover:text-yellow-300 transition-colors text-white">Admissions</a>
-            <a href="#contact" className="hover:text-yellow-300 transition-colors text-white">Contact</a>
-          </nav>
+          <div className="flex items-center gap-6">
+            <nav className="hidden md:flex space-x-6 text-decoration-line: none;">
+              <a href="#home" className="text-white hover:text-yellow-600 transition-colors text-decoration-line: none">Home</a>
+              <a href="#about" className="hover:text-yellow-300 transition-colors text-white">About</a>
+              <a href="#programs" className="hover:text-yellow-300 transition-colors text-white">Programs</a>
+              <a href="#admissions" className="hover:text-yellow-300 transition-colors text-white">Admissions</a>
+              <a href="#contact" className="hover:text-yellow-300 transition-colors text-white">Contact</a>
+            </nav>
+            <Link to={portalTo} className="btn btn-warning fw-semibold">
+              {portalLabel}
+            </Link>
+          </div>
         </div>
       </div>
     </header>
